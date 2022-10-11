@@ -16,6 +16,13 @@ pipeline{
            sh 'mvn clean package'
         }
       }
+      stage('terraform') {
+        steps {
+           sh '''terraform init
+                 terraform plan
+           '''
+        }
+      }
 
     }
 
