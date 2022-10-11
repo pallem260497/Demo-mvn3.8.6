@@ -23,7 +23,7 @@ pipeline{
       stage('terraform') {
         steps {
             
-                sh '''terraform init
+                sh '''terraform init -input=false
                       terraform plan
                    '''
                 } 
