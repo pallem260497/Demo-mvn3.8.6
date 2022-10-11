@@ -6,8 +6,8 @@ pipeline{
       maven 'maven'
     }
     environment {
-      AWS_ACCESS_KEY_ID = credentials('Access Key ID')
-      AWS_SECRET_KEYS = credentials('Secret Access Key') 
+      AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
+      AWS_SECRET_KEYS = credentials('AWS_SECRET_KEYS') 
       AWS_DEFAULT_REGION = "us-east-2"
     }
     stages {
@@ -24,7 +24,7 @@ pipeline{
       stage('terraform') {
         steps {
             
-                sh '''terraform init -input=false
+                sh '''terraform init 
                       terraform plan
                    '''
                 } 
