@@ -5,7 +5,10 @@ pipeline{
       jdk 'jdk11'
       maven 'maven'
     }
-
+    environment {
+      AWS_ACCESS_KEY_ID =   
+      AWS_SECRET_KEYS = 
+    }
     stages {
       stage('Checkout') {
         steps {
