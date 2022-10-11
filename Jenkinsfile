@@ -5,9 +5,7 @@ pipeline{
       jdk 'jdk11'
       maven 'maven'
     }
-  environment {
-        
-    }
+
     stages {
       stage('Checkout') {
         steps {
