@@ -1,7 +1,6 @@
 - name: tomcat installation
   hosts: webservers
   become: yes
-
   tasks:
     - name: update yum package manager
       yum:
