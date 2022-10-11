@@ -26,12 +26,10 @@ pipeline{
                 sh '''terraform init
                       terraform plan
                    '''
-                }
-
-           
+                } 
         }
+      
       }
-
     }
 
 post {
@@ -40,5 +38,5 @@ post {
             
         }
     }
-    
+  
 }
