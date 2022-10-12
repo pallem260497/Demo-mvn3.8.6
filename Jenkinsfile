@@ -23,7 +23,7 @@ pipeline{
       }
       stage('terraform') {
         steps {
-          withAWS(credentials: '	awscredientialskeys', region: 'us-east-2') { 
+          withAWS(credentials: 'awscredientialskeys', region: 'us-east-2') { 
             sh '''terraform init 
                   terraform plan
                '''
@@ -34,7 +34,7 @@ pipeline{
 
 post {
         always {
-            archiveArtifacts artifacts: '**/target/*.war', onlyIfSuccessful: true
+            archiveArtifacts artifacts: '/var/lib/jenkins/workspace/chintu/target/webapp.war', onlyIfSuccessful: true
             
         }
     }
