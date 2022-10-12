@@ -32,11 +32,6 @@ pipeline{
       }
     }
 
-post {
-        always {
-            archiveArtifacts artifacts: '/var/lib/jenkins/workspace/chintu/target/webapp.war', onlyIfSuccessful: true
-            
-        }
-    }
+
   
 }
