@@ -23,14 +23,13 @@ pipeline{
       }
       stage('terraform') {
         steps {
-            
+          withAWS(credentials: '	awscredientialskeys', region: 'us-east-2') { 
             sh '''terraform init 
                   terraform plan
                '''
-                } 
+            }
         }
-      
-      
+      }
     }
 
 post {
