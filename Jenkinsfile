@@ -21,7 +21,7 @@ pipeline{
           withAWS(credentials: 'awscredientialskeys', region: 'us-east-2') { 
             sh '''terraform init 
                   terraform plan -out=tfplan
-                  terraform apply tfplan --auto-approve
+                  terraform apply  --auto-approve tfplan
                '''
             }
         }
