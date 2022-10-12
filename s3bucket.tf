@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "b" {
-  bucket = "Devopsin60min-test-bucket"
+  bucket = "devopsin60min-test-bucket"
 
   tags = {
     Name        = "My bucket"
